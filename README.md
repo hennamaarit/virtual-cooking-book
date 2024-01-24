@@ -7,4 +7,5 @@ The task was done as part of the Full Stack course, it is a final exercise. The 
 
 <img width="593" alt="kuva2" src="https://github.com/hennamaarit/virtual-cooking-book/assets/101903851/4be58f69-e007-4506-927c-15a5b6edb768">
 
+
 <img width="382" alt="kuva3" src="https://github.com/hennamaarit/virtual-cooking-book/assets/101903851/391122ec-c78d-4c56-953d-b8bf2cc0f67e">
