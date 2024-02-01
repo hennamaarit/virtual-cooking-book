@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head osio alkaa -->
+<head>
+  <meta charset="UTF-8">
+  <title>Virtuaalinen reseptikirja</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script src="scripts.js"></script>
+</head>
+<!-- Body osio alkaa -->
+<!-- Sivustolle latautuu tietokannassa olevat reseptit näkyville -->
+<body onload="loadAll()">
+
+  <div id="recipeForm">
+    <h1>Virtuaalinen reseptivihko</h1>
+    <h2>Lisää resepti</h2>
+    <!-- Uuden reseptin lisääminen -->
+    <div class="divi">
+      <!-- Reseptin nimi -->
+      <label for="recipeName">Nimi:</label>
+      <input type="text" id="recipeName" placeholder="Syötä reseptin nimi">
+      <!-- Reseptin tyyppi -->
+      <label for="recipeType">Tyyppi:</label>
+      <select id="recipeType">
+        <option value="Alkupala">Alkupala</option>
+        <option value="Pääruoka">Pääruoka</option>
+        <option value="Jälkiruoka">Jälkiruoka</option>
+        <option value="Muu">Muu ruoka</option>
+      </select>
+      <!-- Reseptin ohje -->  
+      <label for="recipeInstructions">Reseptin ohje:</label>
+      <textarea id="recipeInstructions" placeholder="Kirjoita resepti tähän"></textarea>
+      <!-- Erikoisvalinnat -->
+      <div id="switchs_container">
+        <label>Erikoisvalinnat:</label>
+        <label class="switch">
+          <input type="checkbox" id="glutenFree" />
+          <span class="slider round"></span>
+          <span class="slider-text">Gluteeniton</span>
+        </label>
+        <label class="switch">
+          <input type="checkbox" id="dairyFree" />
+          <span class="slider round"></span>
+          <span class="slider-text">Maidoton</span>
+        </label>
+        <label class="switch">
+          <input type="checkbox" id="vegetarian" />
+          <span class="slider round"></span>
+          <span class="slider-text">Vegaaninen</span>
+        </label>
+      </div>  
+      <!-- Nappi reseptin lisäämiseksi -->
+      <div class="button-container">
+        <button onclick="submitRecipe()">Lisää resepti</button>
+      </div>
+      <!-- Reseptin poisto -->
+      <div class="divi2">
+        <label for="deleteRecipeName">Poista resepti:</label>
+        <input type="text" id="deleteRecipeName" placeholder="Syötä poistettavan reseptin nimi">
+        <button onclick="deleteRecipe()">Poista resepti</button>
+        <p id="infoText"></p>
+      </div>
+    </div>
+    <!-- Kaikki reseptit latautuvat tähän -->
+    <h1>Kaikki reseptit:</h1>
+    <div class="divi3">
+    <ul id="recipeList"></ul>
+    <p id="infoText"></p>
+    </div>
+  </div>
+</body>
+</html>
